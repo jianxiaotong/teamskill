@@ -1,0 +1,8 @@
+GET http://localhost:8081/api/getTeamList
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-11-21T052455.200.json
+
+###
+

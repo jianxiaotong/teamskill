@@ -1,0 +1,20 @@
+{
+  "code": 200,
+  "message": "查询成功",
+  "data": [
+    {
+      "team_id": 1,
+      "team_name": "工程服务团队",
+      "team_comment": "服务其他团队",
+      "team_create": null,
+      "team_creator": null
+    },
+    {
+      "team_id": 8,
+      "team_name": "单独的",
+      "team_comment": "是是是",
+      "team_create": null,
+      "team_creator": null
+    }
+  ]
+}

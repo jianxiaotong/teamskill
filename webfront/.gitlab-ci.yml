@@ -1,0 +1,20 @@
+stages:
+  - build
+  - clean
+feachure_build:
+  stage: build
+  script:
+    - npm install
+    - gulp dist
+    - docker build -t web .
+    - if [ $(docker ps -a -q --filter name=web) ];then docker rm -f web;fi;
+    - docker run -d --name web -p 9090:80 web
+  tags:
+    - build
+clean:
+  stage: clean
+  script:
+    - docker rmi $(docker images | grep none)
+  tags:
+    - build
+  allow_failure: true
