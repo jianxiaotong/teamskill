@@ -3,10 +3,21 @@ from teamskillstack import views,login
 
 
 urlpatterns = [
+    #角色权限
+    path('getRolePer/',views.getRolePer),
     #获取名称
     path('getFunctionName/', views.getFunctionName),
     path('getTeamName/', views.getTeamName),
     path('getPermissionName/', views.getPermissionName),
+    path('getRoleName/', views.getRoleName),
+
+    #团队成员
+    path('serachTeamUser/', views.serachTeamUser),
+    path('serachTeamAdmin/', views.serachTeamAdmin),
+    path('serachUser/', views.serachUser),
+
+
+
     #添加和列表
     path('addTeam/', views.addTeam),
     path('getTeamList/', views.getTeamList),
@@ -21,6 +32,11 @@ urlpatterns = [
     path('addPermission/', views.addPermission),
     path('getRoleList/', views.getRoleList),
     path('addRole/', views.addRole),
+    path('addRolePer/', views.addRolePer),
+    path('getRolePerList/', views.getRolePerList),
+
+
+
 
     #修改和删除
     path('updateTeam/', views.updateTeam),
@@ -35,10 +51,12 @@ urlpatterns = [
     path('deletePermission/', views.deletePermission),
     path('updateRole/', views.updateRole),
     path('deleteRole/', views.deleteRole),
+    path('updateRolePer/', views.updateRolePer),
+    path('deleteRolePer/', views.deleteRolePer),
 
 
     #搜索
-    path('search/', views.search),
+
 
     #登录和注册
     # path('index/', views.index),

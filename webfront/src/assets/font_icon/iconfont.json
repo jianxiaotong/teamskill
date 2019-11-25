@@ -1,0 +1,86 @@
+{
+  "id": "1524403",
+  "name": "teamskill",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-user",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "597548",
+      "name": "修改",
+      "font_class": "xiugai-copy",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "1112266",
+      "name": "密码",
+      "font_class": "mima",
+      "unicode": "e65e",
+      "unicode_decimal": 58974
+    },
+    {
+      "icon_id": "1288622",
+      "name": "姓名",
+      "font_class": "xingming",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    },
+    {
+      "icon_id": "1546590",
+      "name": "搜索",
+      "font_class": "sousuo",
+      "unicode": "e696",
+      "unicode_decimal": 59030
+    },
+    {
+      "icon_id": "2076418",
+      "name": "修改",
+      "font_class": "xiugai",
+      "unicode": "e8cf",
+      "unicode_decimal": 59599
+    },
+    {
+      "icon_id": "5485648",
+      "name": "删除",
+      "font_class": "shanchu",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "5943385",
+      "name": "个人中心",
+      "font_class": "gerenzhongxin",
+      "unicode": "e62a",
+      "unicode_decimal": 58922
+    },
+    {
+      "icon_id": "6058240",
+      "name": "团队管理",
+      "font_class": "Team",
+      "unicode": "e61c",
+      "unicode_decimal": 58908
+    },
+    {
+      "icon_id": "9537807",
+      "name": "权限管理",
+      "font_class": "quanxianguanli",
+      "unicode": "e62d",
+      "unicode_decimal": 58925
+    },
+    {
+      "icon_id": "10352335",
+      "name": "图表",
+      "font_class": "tubiao",
+      "unicode": "e61a",
+      "unicode_decimal": 58906
+    },
+    {
+      "icon_id": "10809190",
+      "name": "加 添加",
+      "font_class": "changyongtubiao-xianxingdaochu-zhuanqu-",
+      "unicode": "e70a",
+      "unicode_decimal": 59146
+    }
+  ]
+}

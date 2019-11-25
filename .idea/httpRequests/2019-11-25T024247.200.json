@@ -1,0 +1,40 @@
+{
+  "data": [
+    {
+      "role_name": "普通成员",
+      "role_id": 1,
+      "permission_name": "查看成员列表",
+      "per_role_id": 1
+    },
+    {
+      "role_name": "管理员",
+      "role_id": 2,
+      "permission_name": "邀请团队成员",
+      "per_role_id": 2
+    },
+    {
+      "role_name": "管理员",
+      "role_id": 2,
+      "permission_name": "添加团队成员",
+      "per_role_id": 3
+    },
+    {
+      "role_name": "管理员",
+      "role_id": 2,
+      "permission_name": "删除团队成员",
+      "per_role_id": 4
+    },
+    {
+      "role_name": "管理员",
+      "role_id": 2,
+      "permission_name": "修改成员权限",
+      "per_role_id": 5
+    },
+    {
+      "role_name": "管理员",
+      "role_id": 2,
+      "permission_name": "查看成员列表",
+      "per_role_id": 6
+    }
+  ]
+}

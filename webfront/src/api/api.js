@@ -100,6 +100,17 @@ export const updateRole = params => { return axios.post(`${base}/api/updateRole/
 //删除角色
 export const deleteRole = params => { return axios.post(`${base}/api/deleteRole/`, params).then(res => res); };
 
+//添加角色权限
+export const addRolePer = params => { return axios.post(`${base}/api/addRolePer/`, params).then(res => res); };
+
+//角色权限列表
+export const getRolePerList = params => { return axios.get(`${base}/api/getRolePerList/`, params).then(res => res); };
+
+//编辑角色权限
+export const updateRolePer = params => { return axios.post(`${base}/api/updateRolePer/`, params).then(res => res); };
+
+//删除角色权限
+export const deleteRolePer = params => { return axios.post(`${base}/api/deleteRolePer/`, params).then(res => res); };
 
 
 

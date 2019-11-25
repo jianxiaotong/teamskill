@@ -1,4 +1,5 @@
 import Login from './views/Login.vue'
+import Register from './views/Register.vue'
 import NotFound from './views/404.vue'
 import Home from './views/Home.vue'
 import Main from './views/Main.vue'
@@ -12,8 +13,10 @@ import Page5 from './views/nav2/Page5.vue'
 import demo from './views/nav2/demo.vue'
 import permissionList from './views/nav3/permissionList.vue'
 import role from './views/nav3/roleList.vue'
+import rolePerList from './views/nav3/rolePerList.vue'
 import echarts from './views/charts/echarts.vue'
 import teamskill from './views/charts/teamskill.vue'
+import rolePer from './views/charts/rolePer.vue'
 let routes = [
     {
         path: '/login',
@@ -21,6 +24,12 @@ let routes = [
         name: '',
         hidden: true
     },
+	{
+	    path: '/register',
+	    component: Register,
+	    name: '',
+	    hidden: true
+	},
     {
         path: '/404',
         component: NotFound,
@@ -46,7 +55,7 @@ let routes = [
         path: '/',
         component: Home,
         name: '团队管理',
-        iconCls: 'fa fa-id-card-o',
+        iconCls: 'icon-userTeam',
         children: [
             { path: '/member', component: member, name: '成员列表' },
    //          { path: '/page5', component: Page5, name: '页面5' },
@@ -57,18 +66,19 @@ let routes = [
 	    path: '/',
 	    component: Home,
 	    name: '权限管理',
-	    iconCls: 'fa fa-address-card',
+	    iconCls: 'icon-userquanxianguanli',
 	    //leaf: true,//只有一个节点
 	    children: [
 	        { path: '/permission', component: permissionList, name: '权限列表' },
-	        { path: '/role', component: role, name: '角色列表' }
+	        { path: '/role', component: role, name: '角色列表' },
+			{ path: '/roleper', component: rolePerList, name: '角色权限' },
 	    ]
 	},
 	{
 	    path: '/',
 	    component: Home,
 	    name: '个人中心',
-	    iconCls: 'fa fa-address-card',
+	    iconCls: 'icon-usergerenzhongxin',
 	    children: [
 	       { path: '/echarts', component: echarts, name: 'echarts' },
 	       { path: '/teamskill', component: teamskill, name: 'teamskill' }
@@ -78,11 +88,12 @@ let routes = [
     {
         path: '/',
         component: Home,
-        name: 'Charts',
-        iconCls: 'fa fa-bar-chart',
+        name: 'Charts  ',
+        iconCls: 'icon-usertubiao',
         children: [
             { path: '/echarts', component: echarts, name: 'echarts' },
-			{ path: '/teamskill', component: teamskill, name: 'teamskill' }
+			{ path: '/teamskill', component: teamskill, name: '技术栈' },
+			{ path: '/rpcharts', component: rolePer, name: '角色权限' }
         ]
     },
     {

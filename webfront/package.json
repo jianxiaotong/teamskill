@@ -15,7 +15,7 @@
     "element-ui": "^2.12.0",
     "font-awesome": "^4.7.0",
     "nprogress": "^0.2.0",
-    "vue": "^2.2.2",
+    "vue": "^2.6.10",
     "vue-fragment": "^1.5.1",
     "vue-router": "^2.3.0",
     "vuex": "^2.0.0-rc.6"

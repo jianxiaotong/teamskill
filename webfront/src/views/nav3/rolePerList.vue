@@ -10,6 +10,8 @@
 			</el-table-column>
 			<el-table-column prop="role_name" label="角色" align="center">
 			</el-table-column>
+			<el-table-column prop="permission_name" label="权限" align="center">
+			</el-table-column>
 			<el-table-column label="操作" width="300">
 				<template slot-scope="scope">
 					<el-button type="primary" size="small" @click="editRole(scope.row)">编辑</el-button>
@@ -26,14 +28,23 @@
 		</el-col>
 
 		<!-- 添加弹出窗 -->
-		<el-dialog title="添加角色" :visible.sync="dialogCreateVisible" width="30%" :before-close="handleClose">
+		<el-dialog title="添加技能" :visible.sync="dialogCreateVisible" width="30%" :before-close="handleClose">
 			<el-form ref="form" :model="form" :rules="rules" label-width="80px">
 				<el-form-item label="角色" prop="role_name">
-					<el-input v-model.trim="form.role_name" placeholder="请输入角色名称" clearable></el-input>
+					<el-select v-model="form.role_name" placeholder="请选择权角色">
+						<el-option v-for="p in roleNames" :label="p.role_name" :value="p.role_name">
+						</el-option>
+					</el-select>
+				</el-form-item>
+				<el-form-item label="权限" prop="permission_name">
+					<el-select v-model="form.permission_name" placeholder="请选择权限">
+						<el-option v-for="p in perNames" :label="p.permission_name" :value="p.permission_name">
+						</el-option>
+					</el-select>
 				</el-form-item>
 			</el-form>
 			<span slot="footer" class="dialog-footer">
-				<el-button type="primary" @click="addRole">添加</el-button>
+				<el-button type="primary" @click="addRolePer">添加</el-button>
 				<el-button @click="cancel">取消</el-button>
 			</span>
 		</el-dialog>
@@ -43,11 +54,20 @@
 		 :close-on-click-modal="false" :close-on-press-escape="false">
 			<el-form id="#update" ref="update" :model="update" :rules="updateRules" label-width="80px">
 				<el-form-item label="角色" prop="role_name">
-					<el-input v-model="update.role_name" placeholder="请输入角色名称" clearable></el-input>
+					<el-select v-model="update.role_name" placeholder="请选择权角色">
+						<el-option v-for="p in roleNames" :label="p.role_name" :value="p.role_name">
+						</el-option>
+					</el-select>
+				</el-form-item>
+				<el-form-item label="权限" prop="permission_name">
+					<el-select v-model="update.permission_name" placeholder="请选择权限">
+						<el-option v-for="p in perNames" :label="p.permission_name" :value="p.permission_name">
+						</el-option>
+					</el-select>
 				</el-form-item>
 			</el-form>
 			<span slot="footer" class="dialog-footer">
-				<el-button type="primary" @click="updateRole" :loading="updateLoading">确定</el-button>
+				<el-button type="primary" @click="updateRolePer" :loading="updateLoading">确定</el-button>
 				<el-button @click="cancel">取消</el-button>
 			</span>
 		</el-dialog>
@@ -56,15 +76,18 @@
 
 <script>
 	import {
-		getRoleList,
-		addRole,
-		updateRole,
-		deleteRole
+		getRolePerList,
+		getPermissionName,
+		getRoleName,
+		addRolePer,
+		updateRolePer,
+		deleteRolePer
 	} from '../../api/api';
 	export default {
 		data() {
 			return {
-				functionNames: [],
+				roleNames: [],
+				perNames: [],
 				loading: false,
 				status: '',
 				dialogVisible: false,
@@ -74,21 +97,34 @@
 				size: 10,
 				form: {
 					role_name: '',
+					permission_name: '',
 				},
 				rules: {
 					role_name: [{
-						required: false,
+						required: true,
 						message: '请输入角色名称',
 						trigger: 'change'
 					}],
+					permission_name: [{
+						required: true,
+						message: '请选择权限',
+						trigger: 'change'
+					}],
+
 				},
 				update: {
 					role_name: '',
+					permission_name: '',
 				},
 				updateRules: {
 					role_name: [{
 						required: false,
 						message: '请输入角色名称',
+						trigger: 'change'
+					}],
+					permission_name: [{
+						required: false,
+						message: '请选择权限',
 						trigger: 'change'
 					}],
 				},
@@ -112,14 +148,14 @@
 				return (index + 1) + (this.page - 1) * this.size
 			},
 			//获取技能列表
-			getRoleList() {
+			getRolePerList() {
 				//分页传参
 				let para = {
 					page: this.page,
 					size: this.size,
 				};
 				this.loading = true;
-				getRoleList(para).then((res) => {
+				getRolePerList(para).then((res) => {
 					this.list = res.data;
 					this.total = res.data.length;
 					this.loading = false;
@@ -146,19 +182,19 @@
 				this.$refs.form.resetFields();
 			},
 			//添加
-			addRole() {
+			addRolePer() {
 				this.$refs.form.validate((valia) => {
 					if (valia) {
-						addRole(this.form).then((res) => {
+						addRolePer(this.form).then((res) => {
 							if (res.code == 200) {
 								this.$message.success(res.message);
 								this.dialogCreateVisible = false;
 								this.createLoading = false;
 								this.resetForm();								
-								this.getRoleList();
+								this.getRolePerList();
 							} else {
 								this.$message.error(res.message);
-								this.getRoleList();
+								this.getRolePerList();
 							}
 						})
 					}
@@ -168,22 +204,22 @@
 		
 			//编辑
 			editRole(team) {
-				this.update.role_id = team.role_id;
+				this.update.per_role_id = team.per_role_id;
 				this.update.role_name = team.role_name;
 				this.update.permission_name = team.permission_name;					
 				this.dialogUpdateVisible = true;
 			},
 			// 更新
-			updateRole() {
+			updateRolePer() {
 				this.$refs.update.validate((valid) => {
 					if (valid) {
 						this.updateLoading = true;
-						updateRole(this.update).then(res => {
+						updateRolePer(this.update).then(res => {
 							if (res.code == 200) {
 								this.$message.success(res.message);
 								this.dialogUpdateVisible = false;
 								this.updateLoading = false;
-								this.getRoleList();
+								this.getRolePerList();
 							} else {
 								this.$message.error(res.message);
 								this.dialogUpdateVisible = false;
@@ -196,13 +232,13 @@
 
 			// 删除
 			delRole(team) {
-				this.$confirm('此操作将永久删除, 是否继续?', '提示', {
+				this.$confirm('此操作将永久删除团队, 是否继续?', '提示', {
 					type: 'warning'
 				}).then(() => {
 					deleteRole(team).then(res => {
 						if (res.code == 200) {
 							this.$message.success(res.message);
-							this.getRoleList();
+							this.getRolePerList();
 						} else {
 							this.$message.error(res.message);
 						}
@@ -214,7 +250,15 @@
 			},
 		},
 		mounted() {
-			this.getRoleList();
+			this.getRolePerList();
+			// 获取per名称
+			getPermissionName().then((res) => {
+				this.perNames = res.data;
+			});
+			// 获取role名称
+			getRoleName().then((res) => {
+				this.roleNames = res.data;
+			});
 		},
 	};
 </script>

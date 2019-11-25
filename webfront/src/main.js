@@ -15,6 +15,7 @@ import routes from './routes'
 //import Mock from './mock'
 //Mock.bootstrap();
 import 'font-awesome/css/font-awesome.min.css'
+import './assets/font_icon/iconfont.css'
 import Echarts from "echarts";
  
 

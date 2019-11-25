@@ -1,3 +1,101 @@
+POST http://localhost:8081/api/serachUser/?name=jxt&team_name=工程服务团队
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-11-25T041428.500.html
+
+###
+
+POST http://localhost:8081/api/serachUser/?name=jxt&team_name=工程服务团队
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-11-25T041344.500.html
+
+###
+
+POST http://localhost:8081/api/serachUser/?name=jxt&team_name=工程服务团队
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-11-25T041143.404.html
+
+###
+
+POST http://localhost:8081/api/serachUser/
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-11-25T041109.404.html
+
+###
+
+GET http://localhost:8081/api/getRolePer/
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-11-25T024247.200.json
+
+###
+
+POST http://localhost:8081/api/getRolePer/
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-11-25T024226.200.html
+
+###
+
+POST http://localhost:8081/api/serachTeamUser/?team_name=工程服务团队
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-11-25T101851.500.html
+
+###
+
+POST http://localhost:8081/api/serachTeamUser/?team_name=工程服务团队
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-11-25T101705.500.html
+
+###
+
+POST http://localhost:8081/api/getTeamList/?team_name=工程服务团队
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-11-25T101653.200.json
+
+###
+
+POST http://172.16.80.156:8081/api/getTeamList/?team_name=工程服务团队
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://172.16.80.156:8081/api/getTeamList/?team_name=工程服务团队
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://172.16.80.156:8081/api//api/getTeamList/?team_name=工程服务团队
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://172.16.80.156:8081/api/getTeamList/
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-11-22T021528.200.json
+
+###
+
 GET http://localhost:8081/api/getTeamList
 Accept: */*
 Cache-Control: no-cache

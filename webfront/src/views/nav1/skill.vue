@@ -201,10 +201,11 @@
 					if (valia) {
 						addSkill(this.form).then((res) => {
 							if (res.code == 200) {
-								this.resetForm();
 								this.$message.success(res.message);
-								this.dialogVisible = false,
-							    this.getSkillList();
+								this.dialogCreateVisible = false;
+								this.createLoading = false;
+								this.resetForm();								
+								this.getSkillList();
 							} else {
 								this.$message.error(res.message);
 								this.getSkillList();
