@@ -27,7 +27,7 @@ Vue.use(Vuex)
 Vue.use(Fragment.Plugin)
 Vue.prototype.$http=Axios
 //NProgress.configure({ showSpinner: false });
-
+Axios.defaults.withCredentials=true;
 const router = new VueRouter({
   routes
 })

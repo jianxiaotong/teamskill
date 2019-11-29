@@ -9,8 +9,7 @@ import TeamList from './views/nav1/teamList.vue'
 import Function from './views/nav1/function.vue'
 import Skill from './views/nav1/skill.vue'
 import member from './views/nav2/member.vue'
-import Page5 from './views/nav2/Page5.vue'
-import demo from './views/nav2/demo.vue'
+import memberTeam from './views/nav2/memberTeam.vue'
 import permissionList from './views/nav3/permissionList.vue'
 import role from './views/nav3/roleList.vue'
 import rolePerList from './views/nav3/rolePerList.vue'
@@ -45,7 +44,7 @@ let routes = [
         children: [
             { path: '/main', component: Main, name: '主页', hidden: true },
             { path: '/showTeamSkill', component: ShowTeamSkill, name: '团队技术栈' },
-            { path: '/addTeam', component: AddTeam, name: '添加团队' },
+            //{ path: '/addTeam', component: AddTeam, name: '添加团队' },
             { path: '/teamList', component: TeamList, name: '团队列表' },
 			{ path: '/function', component: Function, name: '职能列表' },
 			{ path: '/skill', component: Skill, name: '技能列表' },
@@ -58,7 +57,7 @@ let routes = [
         iconCls: 'icon-userTeam',
         children: [
             { path: '/member', component: member, name: '成员列表' },
-   //          { path: '/page5', component: Page5, name: '页面5' },
+            { path: '/memberTeam', component: memberTeam, name: '所在团队' },
 			// { path: '/demo', component: demo, name: 'demo4' },
         ]
     },
@@ -80,8 +79,8 @@ let routes = [
 	    name: '个人中心',
 	    iconCls: 'icon-usergerenzhongxin',
 	    children: [
-	       { path: '/echarts', component: echarts, name: 'echarts' },
-	       { path: '/teamskill', component: teamskill, name: 'teamskill' }
+	       { path: '/echarts', component: echarts, name: '基本信息' },
+	       { path: '/teamskill', component: teamskill, name: '修改密码' }
 	    ]
 	},
    

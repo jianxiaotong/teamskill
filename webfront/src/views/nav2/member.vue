@@ -10,14 +10,16 @@
 			</el-table-column>
 			<el-table-column prop="team_name" label="团队" align="center">
 			</el-table-column>
-			<el-table-column prop="account" label="账户" align="center">
+			<el-table-column prop="name" label="用户名" align="center">
+			</el-table-column>
+			<el-table-column prop="icon" label="头像" align="center">
 			</el-table-column>
 			<el-table-column prop="role_name" label="角色" align="center">
 			</el-table-column>
 			<el-table-column label="操作" width="300">
 				<template slot-scope="scope">
-					<el-button type="primary" size="small" @click="editRole(scope.row)">编辑</el-button>
-					<el-button type="danger" size="small" @click=" delRole(scope.row) ">删除</el-button>
+					<el-button type="primary" size="small":disabled="scope.row.role_name =='创建者'?true:false" @click="editMeb(scope.row)">编辑</el-button>
+					<el-button type="danger" size="small" :disabled="scope.row.role_name =='创建者'?true:false" @click=" delMeb(scope.row) ">删除</el-button>
 				</template>
 			</el-table-column>
 		</el-table>
@@ -38,9 +40,9 @@
 						</el-option>
 					</el-select>
 				</el-form-item>
-				<el-form-item label="成员" prop="role_name">
-					<el-select v-model="form.account" placeholder="请选择成员">
-						<el-option v-for="p in accounts" :label="p.account" :value="p.account">
+				<el-form-item label="成员" prop="name">
+					<el-select v-model="form.name" placeholder="请选择成员">
+						<el-option v-for="p in accounts" :label="p.name" :value="p.name">
 						</el-option>
 					</el-select>
 				</el-form-item>
@@ -53,7 +55,7 @@
 				
 			</el-form>
 			<span slot="footer" class="dialog-footer">
-				<el-button type="primary" @click="addRole">添加</el-button>
+				<el-button type="primary" @click="addMember">添加</el-button>
 				<el-button @click="cancel">取消</el-button>
 			</span>
 		</el-dialog>
@@ -68,15 +70,21 @@
 						</el-option>
 					</el-select>
 				</el-form-item>
-				<el-form-item label="成员" prop="role_name">
-					<el-select v-model="update.account" placeholder="请选择团队">
-						<el-option v-for="p in accounts" :label="p.account" :value="p.account">
+				<el-form-item label="成员" prop="name">
+					<el-select v-model="update.name" placeholder="请选择成员">
+						<el-option v-for="p in accounts" :label="p.name" :value="p.name">
+						</el-option>
+					</el-select>
+				</el-form-item>
+				<el-form-item label="角色" prop="role_name">
+					<el-select v-model="update.role_name" placeholder="请选择角色">
+						<el-option v-for="p in roleNames" :label="p.role_name" :value="p.role_name">
 						</el-option>
 					</el-select>
 				</el-form-item>
 			</el-form>
 			<span slot="footer" class="dialog-footer">
-				<el-button type="primary" @click="updateRole" :loading="updateLoading">确定</el-button>
+				<el-button type="primary" @click="updateMember" :loading="updateLoading">确定</el-button>
 				<el-button @click="cancel">取消</el-button>
 			</span>
 		</el-dialog>
@@ -86,9 +94,9 @@
 <script>
 	import {
 		memberList,
-		addRole,
-		updateRole,
-		deleteRole,
+		addMember,
+		updateMember,
+		deleteMember,
 		getTeamName,
 		getMemberName,
 		getRoleName,
@@ -96,6 +104,8 @@
 	export default {
 		data() {
 			return {
+				accounts:[],
+				roleNames:[],
 				functionNames: [],
 				loading: false,
 				status: '',
@@ -105,29 +115,47 @@
 				total: 0,
 				size: 10,
 				form: {
+					team_name:'',
 					role_name: '',
-					permission_name: '',
+					name: '',
 				},
 				rules: {
 					role_name: [{
-						required: false,
-						message: '请输入角色名称',
+						required: true,
+						message: '请选择角色',
 						trigger: 'change'
 					}],
-					permission_name: [{
+					name: [{
 						required: true,
-						message: '请选择权限',
+						message: '请选择成员',
+						trigger: 'change'
+					}],
+					team_name: [{
+						required: true,
+						message: '请选择团队',
 						trigger: 'change'
 					}],
 
 				},
 				update: {
+					team_name:'',
 					role_name: '',
+					name: '',
 				},
 				updateRules: {
 					role_name: [{
 						required: false,
-						message: '请输入角色名称',
+						message: '请选择角色',
+						trigger: 'change'
+					}],
+					name: [{
+						required: false,
+						message: '请选择成员',
+						trigger: 'change'
+					}],
+					team_name: [{
+						required: false,
+						message: '请选择团队',
 						trigger: 'change'
 					}],
 				},
@@ -185,14 +213,15 @@
 				this.$refs.form.resetFields();
 			},
 			//添加
-			addRole() {
+			addMember() {
 				this.$refs.form.validate((valia) => {
 					if (valia) {
-						addRole(this.form).then((res) => {
+						addMember(this.form).then((res) => {
 							if (res.code == 200) {
 								this.$message.success(res.message);
-								this.dialogUpdateVisible = false;
-								this.updateLoading = false;
+								this.dialogCreateVisible = false;
+								this.createLoading = false;
+								this.resetForm();								
 								this.memberList();
 							} else {
 								this.$message.error(res.message);
@@ -206,17 +235,20 @@
 
 		
 			//编辑
-			editRole(team) {
-				this.update.role_id = team.role_id;
+			editMeb(team) {
+				this.update.name = team.name;
+				this.update.team_name = team.team_name;
+				this.update.member_role_id = team.member_role_id;
+				this.update.team_member_id = team.team_member_id;				
 				this.update.role_name = team.role_name;								
 				this.dialogUpdateVisible = true;
 			},
 			// 更新
-			updateRole() {
+			updateMember() {
 				this.$refs.update.validate((valid) => {
 					if (valid) {
 						this.updateLoading = true;
-						updateRole(this.update).then(res => {
+						updateMember(this.update).then(res => {
 							if (res.code == 200) {
 								this.$message.success(res.message);
 								this.dialogUpdateVisible = false;
@@ -233,11 +265,11 @@
 			},
 
 			// 删除
-			delRole(team) {
-				this.$confirm('此操作将永久删除团队, 是否继续?', '提示', {
+			delMeb(team) {
+				this.$confirm('此操作将永久删除, 是否继续?', '提示', {
 					type: 'warning'
 				}).then(() => {
-					deleteRole(team).then(res => {
+					deleteMember(team).then(res => {
 						if (res.code == 200) {
 							this.$message.success(res.message);
 							this.memberList();

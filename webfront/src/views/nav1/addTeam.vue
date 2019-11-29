@@ -1,10 +1,10 @@
 <template>
 	<el-form ref="form" :model="form" :rules="rules" label-width="80px" style="margin:20px;width:60%;min-width:600px;">
-		<el-form-item label="团队名称" prop="teamName">
-			<el-input v-model.trim="form.teamName" placeholder="请输入团队名称" clearable></el-input>
+		<el-form-item label="团队名称" prop="team_name">
+			<el-input v-model.trim="form.team_name" placeholder="请输入团队名称" clearable></el-input>
 		</el-form-item>
-		<el-form-item label="团队简介" prop="teamComment">
-			<el-input v-model.trim="form.teamComment" placeholder="请输入团队简介" clearable></el-input>
+		<el-form-item label="团队简介" prop="team_comment">
+			<el-input v-model.trim="form.team_comment" placeholder="请输入团队简介" clearable></el-input>
 		</el-form-item>
 		<el-form-item>
 			<el-button type="primary" @click="submitForm">立即添加</el-button>
@@ -21,17 +21,17 @@
 		data() {
 			return {
 				form: {
-					teamName: '',
-					teamComment: '',
+					team_name: '',
+					team_comment: '',
 				},
 				rules: {
-					teamName: [{
+					team_name: [{
 							required: true,
 							message: '请输入团队名称',
 							trigger: 'blur'
 						},
 					],
-					teamComment: [{
+					team_comment: [{
 							required: false,
 							message: '请输入团队简介',
 							trigger: 'blur'

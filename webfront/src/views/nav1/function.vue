@@ -68,7 +68,7 @@
 					</el-select>
 				</el-form-item>
 				<el-form-item label="职能名称" prop="function_name">
-					<el-input v-model="update.function_name" placeholder="新的团队名" clearable></el-input>
+					<el-input v-model="update.function_name" placeholder="请输入职能名称" clearable></el-input>
 				</el-form-item>
 				<el-form-item label="职能介绍" prop="function_comment">
 					<el-input v-model="update.function_comment" placeholder="请输入简介" clearable></el-input>
@@ -131,7 +131,7 @@
 				},
 				updateRules: {
 					team_name: [{
-						required: true,
+						required: false,
 						message: '请选择团队',
 						trigger: 'change'
 					}],

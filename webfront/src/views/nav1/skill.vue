@@ -140,7 +140,7 @@
 					trigger: 'change'
 				}],
 				function_name: [{
-					required: true,
+					required: false,
 					message: '请选择职能',
 					trigger: 'change'
 				}],

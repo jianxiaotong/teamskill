@@ -1,15 +1,18 @@
 from django.urls import path
-from teamskillstack import views,login
+from teamskillstack import views,login,sendemail
 
 
 urlpatterns = [
     #角色权限
     path('getRolePer/',views.getRolePer),
+
+    path('getAllTeam/',views.getAllTeam),
     #获取名称
     path('getFunctionName/', views.getFunctionName),
     path('getTeamName/', views.getTeamName),
     path('getPermissionName/', views.getPermissionName),
     path('getRoleName/', views.getRoleName),
+    path('getMemberName/',views.getMemberName),
 
     #团队成员
     path('serachTeamUser/', views.serachTeamUser),
@@ -57,11 +60,16 @@ urlpatterns = [
 
     #搜索
 
+   #注册时校验用户名和邮箱
+    path('valiName/', login.valiName),
+    path('valiEmail/', login.valiEmail),
+    path('valiEmailcode/', login.valiEmailcode),
 
     #登录和注册
     # path('index/', views.index),
-    # path('login/', views.login),
-    # path('register/', views.register),
+     path('userLogin/', login.userLogin),
+     path('registerUser/',login.registerUser),
     # path('loginout/', views.loginout),
+    path('postEmail/',login.postEmail),
 
 ]

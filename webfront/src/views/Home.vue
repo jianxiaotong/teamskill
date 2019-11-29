@@ -10,21 +10,29 @@
 					<i class="el-icon-s-fold" v-else></i>
 				</div>
 			</el-col>
-			
+	
+			<el-dropdown class="userstyle">
+				<span class="span3"><img src="../assets/1.jpg" /></span>
+				<span class="span1">{{ name }}</span>
+				<span class="span2" @click="logout"><i class="el-icon-switch-button"></i></span>	
+			</el-dropdown>
+
 		</el-col>
 		<el-col :span="24" class="main">
 			<aside :class="collapsed?'menu-collapsed':'menu-expanded'">
 				<!--导航菜单-->
-				<el-menu :default-active="$route.path" class="el-menu-vertical-demo" @open="handleopen" @close="handleclose" @select="handleselect" unique-opened router :collapse="collapsed">
+				<el-menu :default-active="$route.path" class="el-menu-vertical-demo" @open="handleopen" @close="handleclose"
+				 @select="handleselect" unique-opened router :collapse="collapsed">
 					<template v-for="(item,index) in $router.options.routes" v-if="!item.hidden">
 						<el-submenu :index="index+''" v-if="!item.leaf">
 							<template slot="title">
-								<i :class="item.iconCls" style="font-size: 25px;" ></i>
+								<i :class="item.iconCls" style="font-size: 25px;"></i>
 								<span slot="title">{{item.name}}</span>
 							</template>
 							<el-menu-item v-for="child in item.children" :index="child.path" :key="child.path" v-if="!child.hidden">{{child.name}}</el-menu-item>
 						</el-submenu>
-						<el-menu-item v-if="item.leaf&&item.children.length>0" :index="item.children[0].path"><i :class="item.iconCls"></i><span slot="title">{{item.children[0].name}}</span></el-menu-item>
+						<el-menu-item v-if="item.leaf&&item.children.length>0" :index="item.children[0].path"><i :class="item.iconCls"></i><span
+							 slot="title">{{item.children[0].name}}</span></el-menu-item>
 					</template>
 				</el-menu>
 				<!--导航菜单-折叠后-->
@@ -41,13 +49,18 @@
 			</section>
 		</el-col>
 	</el-row>
+
+
 </template>
 
 <script>
 	export default {
+		
 		data() {
+	
 			return {
-				sysName: 'AUTOTEST',
+				name: window.localStorage.getItem('useremail'),				
+				sysName: 'SKILLSTACK',
 				collapsed: false,
 				sysUserName: '',
 				sysUserAvatar: '',
@@ -64,6 +77,7 @@
 			}
 		},
 		methods: {
+			
 			onSubmit() {
 				console.log('submit!');
 			},
@@ -96,37 +110,37 @@
 			}
 		},
 		mounted() {
-			var user = sessionStorage.getItem('user');
-			if(user) {
-				user = JSON.parse(user);
-				this.sysUserName = user.name || '';
-				this.sysUserAvatar = user.avatar || '';
-			}
-
+			 let useremail=window.localStorage.getItem('useremail')
+			 console.log(useremail)
 		}
 	}
 </script>
 
 <style scoped lang="scss">
 	@import '~scss_vars';
+
 	.container {
 		position: absolute;
 		top: 0px;
 		bottom: 0px;
 		width: 100%;
+
 		.header {
 			height: 50px;
 			line-height: 60px;
 			background: $color-primary;
 			background-color: #7FC8BA;
 			color: #FFFFFF;
+
 			.userinfo {
 				text-align: right;
 				padding-right: 35px;
 				float: right;
+
 				.userinfo-inner {
 					cursor: pointer;
 					color: #fff;
+
 					img {
 						width: 40px;
 						height: 40px;
@@ -136,6 +150,7 @@
 					}
 				}
 			}
+
 			.logo {
 				//width:230px;
 				height: 60px;
@@ -145,21 +160,26 @@
 				border-color: rgba(238, 241, 146, 0.3);
 				border-right-width: 1px;
 				border-right-style: solid;
+
 				img {
 					width: 40px;
 					float: left;
-					margin:10px 10px 10px 18px;
+					margin: 10px 10px 10px 18px;
 				}
+
 				.txt {
 					color: #fff;
 				}
 			}
+
 			.logo-width {
 				width: 201px;
 			}
+
 			.logo-collapse-width {
 				width: 65px
 			}
+
 			.tools {
 				color: white;
 				padding: 0px 23px;
@@ -169,6 +189,7 @@
 				cursor: pointer;
 			}
 		}
+
 		.main {
 			display: flex;
 			// background: #324057;
@@ -176,21 +197,26 @@
 			top: 50px;
 			bottom: 0px;
 			overflow: hidden;
+
 			aside {
 				flex: 0 0 230px;
 				width: 230px;
 				color: #F5F5F5;
+
 				// position: absolute;
 				// top: 0px;
 				// bottom: 0px;
 				.el-menu {
 					height: 100%;
 				}
+
 				.collapsed {
 					width: 60px;
+
 					.item {
 						position: relative;
 					}
+
 					.submenu {
 						position: absolute;
 						top: 0px;
@@ -201,14 +227,17 @@
 					}
 				}
 			}
+
 			.menu-collapsed {
 				flex: 0 0 60px;
 				width: 60px;
 			}
+
 			.menu-expanded {
 				flex: 0 0 230px;
 				width: 230px;
 			}
+
 			.content-container {
 				// background: #f1f2f7;
 				flex: 1;
@@ -219,17 +248,21 @@
 				// left: 230px;
 				overflow-y: scroll;
 				padding: 20px;
+
 				.breadcrumb-container {
+
 					//margin-bottom: 15px;
 					.title {
 						width: 200px;
 						float: left;
 						color: #475669;
 					}
+
 					.breadcrumb-inner {
 						float: right;
 					}
 				}
+
 				.content-wrapper {
 					background-color: #fff;
 					box-sizing: border-box;
@@ -237,9 +270,43 @@
 			}
 		}
 	}
-	.el-icon-s-fold{width: 30px;}
+
+	.el-icon-s-fold {
+		width: 30px;
+	}
+
 	.el-menu-vertical-demo:not(.el-menu--collapse) {
-    width: 200px;
-    min-height: 400px;
-  }
+		width: 200px;
+		min-height: 400px;
+	}
+	.userstyle{
+		margin-left: 26%;
+		width: 200px;
+		height: 48px;
+		border: 1px #000000 solid;
+	}
+	.span1{
+		margin-left: 8%;
+		width: 100px;
+		height: 48px;
+		font-size: 20px;
+		vertical-align:middle;
+		margin-top: -10%;
+	}
+	.span2{
+		margin-left: 14%;
+		width: 50px;
+		height: 48px;
+		vertical-align:middle;
+		margin-bottom: 5%;
+	}
+	img{
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		margin-top: 2%;
+	}
+	.span3{
+		vertical-align:middle;
+	}
 </style>

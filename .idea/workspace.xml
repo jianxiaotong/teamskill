@@ -2,37 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd21a3bb-7904-46e2-9d12-45b9c48d54b3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/teamskill/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/teamskill/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/teamskillstack/denglu.py" beforeDir="false" afterPath="$PROJECT_DIR$/teamskillstack/denglu.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/teamskillstack/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/teamskillstack/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/teamskillstack/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/teamskillstack/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/teamskillstack/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/teamskillstack/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webfront/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/webfront/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webfront/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/webfront/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webfront/config/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/webfront/config/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webfront/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webfront/src/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webfront/src/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/webfront/src/api/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webfront/src/assets/Windows.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webfront/src/assets/bg1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webfront/src/assets/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webfront/src/assets/logo4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webfront/src/assets/user.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webfront/src/assets/个人中心.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webfront/src/assets/团队管理.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webfront/src/assets/密码.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webfront/src/assets/权限管理.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webfront/src/assets/账户.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webfront/src/components/Hub.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webfront/src/components/Node.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webfront/src/components/addTeam.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webfront/src/components/envList.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webfront/src/api/axioses.js" beforeDir="false" afterPath="$PROJECT_DIR$/webfront/src/api/axioses.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webfront/src/assets/font_icon/demo.css" beforeDir="false" afterPath="$PROJECT_DIR$/webfront/src/assets/font_icon/demo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webfront/src/assets/font_icon/demo_index.html" beforeDir="false" afterPath="$PROJECT_DIR$/webfront/src/assets/font_icon/demo_index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webfront/src/assets/font_icon/iconfont.css" beforeDir="false" afterPath="$PROJECT_DIR$/webfront/src/assets/font_icon/iconfont.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webfront/src/assets/font_icon/iconfont.json" beforeDir="false" afterPath="$PROJECT_DIR$/webfront/src/assets/font_icon/iconfont.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webfront/src/assets/font_icon/iconfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/webfront/src/assets/font_icon/iconfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webfront/src/common/js/echarts.all.js" beforeDir="false" afterPath="$PROJECT_DIR$/webfront/src/common/js/echarts.all.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webfront/src/common/js/echarts.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/webfront/src/common/js/echarts.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webfront/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/webfront/src/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webfront/src/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/webfront/src/routes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webfront/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webfront/src/views/Home.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webfront/src/views/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webfront/src/views/Login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webfront/src/views/Register.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webfront/src/views/Register.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webfront/src/views/charts/rolePer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webfront/src/views/charts/rolePer.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webfront/src/views/charts/teamskill.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webfront/src/views/charts/teamskill.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webfront/src/views/nav1/addTeam.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webfront/src/views/nav1/addTeam.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webfront/src/views/nav1/function.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webfront/src/views/nav1/function.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webfront/src/views/nav1/skill.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webfront/src/views/nav1/skill.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webfront/src/views/nav1/teamList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webfront/src/views/nav1/teamList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webfront/src/views/nav2/member.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webfront/src/views/nav2/member.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webfront/src/views/nav3/permissionList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webfront/src/views/nav3/permissionList.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webfront/src/views/nav3/roleList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webfront/src/views/nav3/roleList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webfront/src/views/nav3/rolePerList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webfront/src/views/nav3/rolePerList.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -67,44 +63,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/teamskillstack/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1300">
-              <caret line="766" lean-forward="true" selection-start-line="766" selection-start-column="2" selection-end-line="787" selection-end-column="45" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-                <element signature="e#21929#23053#0" />
-                <element signature="e#23098#23739#0" />
-                <element signature="e#23782#24646#0" />
-                <element signature="e#25197#25845#0" />
-                <element signature="e#25889#26579#0" />
-                <element signature="e#25189#26791#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/teamskillstack/urls.py">
+        <entry file="file://$PROJECT_DIR$/webfront/src/api/api.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="61">
-              <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/teamskillstack/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="102" column="18" selection-start-line="102" selection-start-column="4" selection-end-line="102" selection-end-column="18" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-10">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
@@ -127,9 +90,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="dummy://restClient/response11.html" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -172,6 +132,11 @@
               <item name="teamskill" type="b2602c69:ProjectViewProjectNode" />
               <item name="teamskill" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="teamskill" type="b2602c69:ProjectViewProjectNode" />
+              <item name="teamskill" type="462c0819:PsiDirectoryNode" />
+              <item name="teamskill" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -184,21 +149,21 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="D:/teamskill" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\展示团队技能栈\teamskill" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\githubskill\teamskill" />
       <recent name="D:\展示团队技能栈\teamskill" />
       <recent name="D:\展示团队技能栈\teamskill\teamskillstack" />
       <recent name="D:\展示团队技能栈\teamskill\webfront\src" />
       <recent name="D:\展示团队技能栈\teamskill\webfront\src\components" />
-      <recent name="D:\展示团队技能栈\teamskill\webfront\src\api" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\展示团队技能栈\teamskill" />
     </key>
   </component>
   <component name="RestClientSettings">
@@ -448,11 +413,12 @@
       <workItem from="1574392858902" duration="11138000" />
       <workItem from="1574644682577" duration="6982000" />
       <workItem from="1574660669280" duration="6338000" />
+      <workItem from="1575006116224" duration="204000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="118335000" />
+    <option name="totallyTimeSpent" value="118539000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -467,7 +433,7 @@
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49322033" visible="true" weight="0.15534683" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49322033" visible="true" weight="0.158237" />
       <window_info id="Structure" order="1" sideWeight="0.5067797" side_tool="true" weight="0.22037572" />
       <window_info id="Favorites" order="2" sideWeight="0.5052411" side_tool="true" weight="0.20520231" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -480,7 +446,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32916668" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.2777778" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32916668" />
       <window_info anchor="bottom" id="REST Client" order="13" weight="0.38055557" />
@@ -528,7 +494,6 @@
     <entry file="file://$PROJECT_DIR$/webfront/src/main.js" />
     <entry file="file://$PROJECT_DIR$/webfront/src/App.vue" />
     <entry file="file://$PROJECT_DIR$/webfront/src/components/addTeam.vue" />
-    <entry file="file://$PROJECT_DIR$/webfront/src/api/api.js" />
     <entry file="file://D:/python/Lib/site-packages/django/core/servers/basehttp.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="875">
@@ -582,9 +547,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webfront/.editorconfig">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/webfront/.editorconfig" />
     <entry file="file://$PROJECT_DIR$/teamskillstack/login.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1625">
@@ -603,13 +566,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html" />
     <entry file="file://$PROJECT_DIR$/teamskill/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
@@ -620,20 +577,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/teamskill/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="56" column="50" selection-start-line="56" selection-start-column="41" selection-end-line="56" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/indexrrrr.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="3" column="26" lean-forward="true" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/indexrrrr.html" />
     <entry file="file://D:/python/Lib/site-packages/django/core/handlers/base.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -643,23 +587,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/teamskillstack/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1300">
-          <caret line="766" lean-forward="true" selection-start-line="766" selection-start-column="2" selection-end-line="787" selection-end-column="45" />
+        <state relative-caret-position="18875">
+          <caret line="766" selection-start-line="766" selection-start-column="2" selection-end-line="787" selection-end-column="45" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
-            <element signature="e#21929#23053#0" />
-            <element signature="e#23098#23739#0" />
-            <element signature="e#23782#24646#0" />
-            <element signature="e#25197#25845#0" />
-            <element signature="e#25889#26579#0" />
-            <element signature="e#25189#26791#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/teamskillstack/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
+        <state relative-caret-position="2500">
           <caret line="102" column="18" selection-start-line="102" selection-start-column="4" selection-end-line="102" selection-end-column="18" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
@@ -669,11 +607,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/teamskillstack/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
+        <state relative-caret-position="-892">
           <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/teamskill/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1367">
+          <caret line="56" column="50" selection-start-line="56" selection-start-column="41" selection-end-line="56" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webfront/src/api/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>

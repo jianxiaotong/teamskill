@@ -12,8 +12,8 @@
 			</el-table-column>
 			<el-table-column label="操作" width="300">
 				<template slot-scope="scope">
-					<el-button type="primary" size="small" @click="editRole(scope.row)">编辑</el-button>
-					<el-button type="danger" size="small" @click=" delRole(scope.row) ">删除</el-button>
+					<el-button type="primary" size="small" :disabled="scope.row.role_name =='创建者'?true:false" @click="editRole(scope.row)">编辑</el-button>
+					<el-button type="danger" size="small" :disabled="scope.row.role_name =='创建者'?true:false" @click=" delRole(scope.row) ">删除</el-button>
 				</template>
 			</el-table-column>
 		</el-table>

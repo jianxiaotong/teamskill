@@ -112,7 +112,7 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
@@ -123,3 +123,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'static/assets/images/users').replace("\\","
 
 CORS_ALLOW_CREDENTIALS =True
 CORS_ORIGIN_ALLOW_ALL =True
+
+#邮箱激活配置
+EMAIL_HOST = "smtp.qq.com"
+EMAIL_PORT = 25
+EMAIL_HOST_USER = "1766540044@qq.com"   # 邮箱
+EMAIL_HOST_PASSWORD = "bldukjbafkdrcfed"   # 邮箱授权码
+EMAIL_USE_TLS= False

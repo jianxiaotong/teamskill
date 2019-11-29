@@ -52,7 +52,7 @@ class SkillFunction(models.Model):
 class User(models.Model):
     user_id = models.AutoField(primary_key=True)
     name=models.CharField(u'用户名', max_length=100,unique=True,null=True, blank=True)
-    email = models.EmailField(u'邮箱',unique=True,null=True, blank=True)
+    email = models.EmailField(u'邮箱',max_length=100,unique=True,null=True, blank=True)
     password = models.CharField(u'密码', max_length=100)
     icon = models.CharField(u'头像', max_length=150, null=True, blank=True)
     create_time =  models.DateTimeField(u'创建时间',null=True, blank=True)
@@ -111,19 +111,14 @@ class MemeberRole(models.Model):
 # 邮箱验证
 class EmailVerifyRecord(models.Model):
     # 验证码
-    code = models.CharField(max_length=20, verbose_name="验证码")
-    email = models.EmailField(max_length=50, verbose_name="邮箱")
+    code = models.CharField(u'验证码',max_length=100)
+    email = models.EmailField(u'验证码',max_length=100)
     # 包含注册验证和找回验证
-    send_type = models.CharField(verbose_name="验证码类型", max_length=10,
-                                 choices=(("register", "注册"), ("forget", "找回密码")))
-    send_time = models.DateTimeField(verbose_name="发送时间", default=datetime.datetime.now())
+    send_type = models.CharField(u"验证码类型", max_length=50,  choices=(("register", "注册"), ("forget", "找回密码")))
+    send_time = models.DateTimeField(u"发送时间", auto_now=True)
 
     class Meta:
-        verbose_name = u"2. 邮箱验证码"
-        verbose_name_plural = verbose_name
-
-    def __unicode__(self):
-        return '{0}({1})'.format(self.code, self.email)
+        db_table = 'emailRecord'
 
 
 

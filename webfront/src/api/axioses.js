@@ -11,7 +11,8 @@ axios.post = function (url, data = {}) {
     data: qs.stringify(data), // post 请求的数据,很多人
     timeout: 5000, // 请求超时时间, 单位毫秒
     headers: {
-      'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+      'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+	  // 'Authorization': window.localStorage.getItem('token')
     }
   })
 }

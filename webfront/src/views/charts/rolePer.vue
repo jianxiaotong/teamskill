@@ -131,7 +131,33 @@
                                          }
                                      ]
                                  },
-                            
+                            {
+                                name: '创建者',
+                                symbol: 'circle',
+                               
+                                lineStyle:{
+                                    color:"blue"
+                                },
+                                children: [
+                                    {
+                                        name: '王一',
+                                        
+                                        
+                                        lineStyle:{
+                                            color:"blue"
+                                        }
+                                    },
+                                    {
+                                        name: '网二',
+                                     
+                                       
+                                        lineStyle:{
+                                            color:"blue"
+                                        }
+                                    }
+                                ]
+                            },
+                                                        
                              ]
                          }
                      ]

@@ -9,15 +9,15 @@ from django.db import connection
 from django.contrib.auth.hashers import check_password, make_password
 from django.http import HttpResponseRedirect, JsonResponse
 from django.shortcuts import render, redirect
-from teamskill.settings import MEDIA_ROOT
+from esbook.settings import MEDIA_ROOT
 
-# 发送邮箱验证码
-EMAIL_HOST = "smtp.163.com"     # 服务器
-EMAIL_PORT = 25                 # 一般情况下都为25
-EMAIL_HOST_USER = "xxx@163.com"     # 账号
-EMAIL_HOST_PASSWORD = "******"          # 密码 (注意：这里的密码指的是授权码)
-EMAIL_USE_TLS = False       # 一般都为False
-EMAIL_FROM = "xxx@163.com"      # 邮箱来自
+# 第三方 SMTP 服务
+mail_host = "smtp.126.com"  # 设置服务器
+mail_user = "s_wuyan@126.com"  # 用户名
+mail_pass = "15893703624wy"  # 客户端授权码
+mail_port = 465
+
+sender = 's_wuyan@126.com'  # 发送者邮箱
 
 
 # 跳转到主页面
